@@ -2,6 +2,8 @@
 
 Generate cards ready to be printed out and used in a Guess Who game. Simply provide images, and the code does the rest!
 
+![Screenshot of the code in action](./docs/assets/chrome_screenshot.png)
+
 ## Steps to create a custom Guess Who game
 
 Follow these steps to create your own custom guess who game!
