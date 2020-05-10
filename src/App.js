@@ -11,7 +11,7 @@ function App() {
 
   let message = null;
   if (images.length === 0) {
-    message = "Put the images into the 'faces' folder!"
+    message = "Put images into the 'faces' folder!"
   }
 
   return (

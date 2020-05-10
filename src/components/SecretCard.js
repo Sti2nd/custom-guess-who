@@ -17,8 +17,8 @@ function SecretCard(props) {
 }
 
 const StyledSecretCard = styled.div.attrs({className: "faceCard"})`
-  height: 70mm;
-  width: 35mm;
+  height: 77mm;
+  width: 45mm;
   margin: 0.5px;
 
   .imageContainer {

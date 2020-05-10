@@ -1,28 +1,31 @@
-# Custom guess who game
+# Custom Guess Who game
 
-It's as easy as 1, 2, 3.
+Generate cards ready to be printed out and used in a Guess Who game. Simply provide images, and the code does the rest!
 
-1. Name the image file the same as your friend
-2. Add the image to the folder `/src/faces`.
-3. Print the resulting web page from your browser (CTRL + P)!
+## Steps to create a custom Guess Who game
+
+Follow these steps to create your own custom guess who game!
+
+1. Buy a copy of the game [Guess Who?](https://en.wikipedia.org/wiki/Guess_Who%3F)
+2. Find 24 images of someone you want to have in your game.
+3. For the best result you want to cut the images to the person's head.
+   - *(Optional)* To avoid white stripes on the sides of the image (to fill the image field in the card) use the ratio `121:98` when cutting.
+4. Name the image files the name of the persons.
+5. Clone this repository and run the web app with `npm start`
+6. Add the images to the folder `/src/faces`
+7. Print the resulting web page from your browser (CTRL + P)
    - In Chrome in the print dialog, choose "More settings" and check the checkbox "Background graphics".
-
-## Preparation
-
-Before doing the above steps you need to find images of the persons you want in your game!
-
-1. Find 24 images of someone
-2. For the best result you want to cut the image to the person's head.
-   1. *(Optional)* To fill the image field (to avoid white stripes on the sides of the image) use the ratio `121:98` when cutting.
+   - Tip: the cards will work best if they are stiffer than regular printer paper. To achieve this you can use a thicker paper, photopaper or laminating the printer paper. You can also simply glue printer paper onto thicker paper if your printer cannot print it.
+8. Cut out the cards and play with them!
 
 ## Will this work for me
 
-You should double check that the sizes of the cards matches the sizes of your game. Sizes for this project:
+You should double check that the sizes of the cards matches the sizes of your game. Sizes hard coded in this repo are:
 
 - Face card: 32mm x 35mm
 - Secret card: 77mm x 45mm
 
-You can change the sizes by changing the CSS inside the components.
+You can change the sizes by changing the CSS inside the components FaceCard and SecretCard.
 
 Currently the code are written to only handle .png, .jpg and .svg files.
 
