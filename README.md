@@ -11,6 +11,7 @@ Follow these steps to create your own custom guess who game!
 1. Buy a copy of the game [Guess Who?](https://en.wikipedia.org/wiki/Guess_Who%3F)
 2. Find 24 images of someone you want to have in your game.
 3. For the best result you want to cut the images to the person's head.
+   - Tip: Cropping can be done in many applications, like the built in Photos app in Windows. An app that supports setting the aspect ratio when cropping is [GIMP](https://www.gimp.org/).
    - *(Optional)* To avoid white stripes on the sides of the image (to fill the image field in the card) use the ratio `121:98` when cutting.
 4. Name the image files the name of the persons.
 5. Clone this repository and run the web app with `npm start`
