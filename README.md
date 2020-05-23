@@ -28,7 +28,7 @@ You should double check that the sizes of the cards matches the sizes of your ga
 - Face card: 32mm x 35mm
 - Secret card: 77mm x 45mm
 
-You can change the sizes by changing the CSS inside the components FaceCard and SecretCard.
+You can change the sizes by changing the CSS inside the components `FaceCard.js` and `SecretCard.js`. The card colours are defined in `App.css`.
 
 Currently the code are written to only handle .png, .jpg and .svg files.
 
