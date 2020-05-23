@@ -40,6 +40,8 @@ Since CSS doesn't support page breaks inside Flexbox or CSS Grid I have hard cod
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Uses styled-components to put CSS in JS (the components).
+
 ## Available Scripts
 
 In the project directory, you can run:
