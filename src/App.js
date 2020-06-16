@@ -6,7 +6,7 @@ import { cardTypes } from "./enums";
 
 function App() {
   const images = importAllImages(
-    require.context("./faces", false, /\.(png|jpe?g|svg)$/)
+    require.context("./faces", false, /\.(PNG|png|jpe?g|JPE?G|svg|SVG)$/)
   );
 
   let message = null;
