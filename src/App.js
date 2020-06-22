@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 
 import CardPage from "./components/CardPage";
+import Start from "./components/Start";
 import { cardTypes } from "./enums";
 
 function App() {
@@ -9,13 +10,10 @@ function App() {
     require.context("./faces", false, /\.(PNG|png|jpe?g|JPE?G|svg|SVG)$/)
   );
 
-  let message = null;
-  if (images.length === 0) {
-    message = "Put images into the 'faces' folder!"
-  }
-
   return (
     <div className="App">
+      {images.length === 0 ? <Start /> : null}
+
       <CardPage
         cardType={cardTypes.FACE_CARD}
         color="player1Color"
@@ -28,6 +26,10 @@ function App() {
         faces={images}
         newPage={true}
       />
+      {/* The slicing in the following two component prop inputs are because the 
+      cards would overflow a page and wouldn't look nice on a printed page. 
+      Flexbox and CSS doesn't support page break, so instead we make two 
+      Flexbox containers. */}
       <CardPage
         cardType={cardTypes.SECRET_CARD}
         color="secretColor"
@@ -40,8 +42,6 @@ function App() {
         faces={images.slice(12)}
         newPage={true}
       />
-
-      {message}
     </div>
   );
 }
