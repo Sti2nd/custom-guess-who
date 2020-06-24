@@ -20,3 +20,13 @@ body {
 .newPage {
   break-before: page;
 }
+
+.faceDetectImage, .faceDetectCanvas {
+  border: 1px solid red;
+}
+
+.faceDetectCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

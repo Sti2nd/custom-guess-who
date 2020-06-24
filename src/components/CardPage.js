@@ -25,7 +25,7 @@ function CardPage(props) {
   return (
     <StyledCardPage className={newPageClass}>{renderedFaces}</StyledCardPage>
   );
-}
+};
 
 CardPage.propTypes = {
   faces: PropTypes.array.isRequired,

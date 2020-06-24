@@ -1,7 +1,14 @@
 import React from "react";
 
-function Start() {
-  return <div>Put images into the 'faces' folder!</div>;
+import PrintPage from "./PrintPage";
+import FaceDetection from "./FaceDetection";
+
+function Start(props) {
+  if (props.runFaceDetection){
+    return <FaceDetection faces={props.images} />;
+  } else {
+    return <PrintPage faces={props.images} />;
+  }
 }
 
 export default Start;
