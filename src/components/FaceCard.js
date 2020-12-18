@@ -16,8 +16,8 @@ function FaceCard(props) {
 }
 
 const StyledFaceCard = styled.div.attrs({ className: "faceCard" })`
-  width: 32mm;
-  height: 35mm;
+  width: 28mm;
+  height: 50mm;
   margin: 0.5px;
 
   .imageContainer {

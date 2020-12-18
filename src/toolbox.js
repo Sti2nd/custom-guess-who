@@ -3,5 +3,8 @@
 * @param {string} path The import path
 */
 export function getFileNameFromPath(path) {
- return path.split("/").slice(-1)[0].split(".")[0];
+    var out = path.split("/").slice(-1)[0].split(".")[0];
+    if (path.includes("2Q==") || path.includes("blank_card"))
+        out = "";
+    return out;
 }

@@ -12,7 +12,7 @@ Follow these steps to create your own custom guess who game!
 2. Find 24 images of someone you want to have in your game.
 3. For the best result you want to cut the images to the person's head.
    - Tip: Cropping can be done in many applications, like the built in Photos app in Windows. An app that supports setting the aspect ratio when cropping is [GIMP](https://www.gimp.org/).
-   - *(Optional)* To avoid white stripes on the sides of the image (to fill the image field in the card) use the ratio `121:98` when cutting.
+   - *(Optional)* To avoid white stripes on the sides of the image (to fill the image field in the card) use the ratio `22:32` when cutting.
 4. Name the image files the name of the persons.
 5. Clone this repository and run the web app with `npm start`
 6. Add the images to the folder `/src/faces`
@@ -25,8 +25,8 @@ Follow these steps to create your own custom guess who game!
 
 You should double check that the sizes of the cards matches the sizes of your game. Sizes hard coded in this repo are:
 
-- Face card: 32mm x 35mm
-- Secret card: 77mm x 45mm
+- Face card: 50mm (height) x 28mm (width)
+- Secret card: 73mm (height) x 36mm (width)
 
 You can change the sizes by changing the CSS inside the components `FaceCard.js` and `SecretCard.js`. The card colours are defined in `App.css`.
 
