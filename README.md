@@ -4,6 +4,11 @@ Generate cards ready to be printed out and used in a Guess Who game. Simply prov
 
 ![Screenshot of the code in action](./docs/assets/chrome_screenshot.png)
 
+## Features
+
+- Use your own digital images and print out ready to play with cards.
+- Create blank cards you can glue on images and write names after printing.
+
 ## Steps to create a custom Guess Who game
 
 Follow these steps to create your own custom guess who game!
@@ -11,7 +16,7 @@ Follow these steps to create your own custom guess who game!
 1. Buy a copy of the game [Guess Who?](https://en.wikipedia.org/wiki/Guess_Who%3F)
 2. Find 24 images of someone you want to have in your game.
 3. For the best result you want to cut the images to the person's head.
-   - Tip: Cropping can be done in many applications, like the built in Photos app in Windows. An app that supports setting the aspect ratio when cropping is [GIMP](https://www.gimp.org/).
+   - Tip: Cropping can be done in many applications, like the built in Photos app in Windows. A free app that supports setting the aspect ratio when cropping is [GIMP](https://www.gimp.org/).
    - *(Optional)* To avoid white stripes on the sides of the image (to fill the image field in the card) use the ratio `22:32` when cutting.
 4. Name the image files the name of the persons.
    - For a blank name use "blank_name" somewhere in the file name. You can use "blank_name1", "blank_name2", etc. for as many blank names as you want.
@@ -31,11 +36,13 @@ You should double check that the sizes of the cards matches the sizes of your ga
 
 You can change the sizes by changing the CSS inside the components `FaceCard.js` and `SecretCard.js`. The card colours are defined in `App.css`.
 
-Currently the code are written to only handle .png, .jpg and .svg files.
+Currently the code are written to find the file extensions .png, .jpg and .svg. The [limitation is your browser](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#Supported_image_formats), so it should be possible to modify the code and use any file format your browser support.
+
+The print feature of your browser could mess with the scaling. Printing a test page and measuring the cards is adviced.
 
 ## Quirks
 
-Since CSS doesn't support page breaks inside Flexbox or CSS Grid I have hard coded that there are four pages. One for player 1 face cards (with blue colours), one for player 2 face cards (with red colours), and two pages for the secret cards (with yellow colours).
+Since CSS doesn't support page breaks inside Flexbox or CSS Grid it is hard coded that there are four pages. One for player 1 face cards (with blue colours), one for player 2 face cards (with red colours), and two pages for the secret cards (with yellow colours).
 
 ## Dev stuff
 
@@ -43,7 +50,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Uses styled-components to put CSS in JS (the components).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
