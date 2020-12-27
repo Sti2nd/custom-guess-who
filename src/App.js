@@ -3,7 +3,7 @@ import "./App.css";
 
 import CardPage from "./components/CardPage";
 import Start from "./components/Start";
-import { cardTypes } from "./enums";
+import { CARD_TYPES } from "./constants/cardTypes";
 
 function App() {
   const images = importAllImages(
@@ -15,13 +15,13 @@ function App() {
       {images.length === 0 ? <Start /> : null}
 
       <CardPage
-        cardType={cardTypes.FACE_CARD}
+        cardType={CARD_TYPES.FACE_CARD}
         color="player1Color"
         faces={images}
         newPage={false}
       />
       <CardPage
-        cardType={cardTypes.FACE_CARD}
+        cardType={CARD_TYPES.FACE_CARD}
         color="player2Color"
         faces={images}
         newPage={true}
@@ -31,13 +31,13 @@ function App() {
       Flexbox and CSS doesn't support page break, so instead we make two 
       Flexbox containers. */}
       <CardPage
-        cardType={cardTypes.SECRET_CARD}
+        cardType={CARD_TYPES.SECRET_CARD}
         color="secretColor"
         faces={images.slice(0, 12)}
         newPage={true}
       />
       <CardPage
-        cardType={cardTypes.SECRET_CARD}
+        cardType={CARD_TYPES.SECRET_CARD}
         color="secretColor"
         faces={images.slice(12)}
         newPage={true}

@@ -4,15 +4,15 @@ import PropTypes from "prop-types";
 import FaceCard from "./FaceCard";
 import SecretCard from "./SecretCard";
 import styled from "styled-components";
-import { cardTypes } from "../enums";
+import { CARD_TYPES } from "../constants/cardTypes";
 
 function CardPage(props) {
   // A list with a card for each face. Type of card is decided by the cardType
   // prop.
   const renderedFaces = props.faces.map((face, index) => {
-    if (props.cardType === cardTypes.FACE_CARD) {
+    if (props.cardType === CARD_TYPES.FACE_CARD) {
       return <FaceCard color={props.color} src={face} key={index} />;
-    } else if (props.cardType === cardTypes.SECRET_CARD) {
+    } else if (props.cardType === CARD_TYPES.SECRET_CARD) {
       return <SecretCard color={props.color} src={face} key={index} />;
     } else {
       return <></>;
@@ -32,7 +32,7 @@ CardPage.propTypes = {
 };
 
 CardPage.defaultProps = {
-  cardType: cardTypes.FACE_CARD,
+  cardType: CARD_TYPES.FACE_CARD,
   color: "blue",
 };
 
