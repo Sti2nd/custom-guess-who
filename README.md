@@ -20,7 +20,7 @@ Follow these steps to create your own custom guess who game!
    - *(Optional)* To avoid white stripes on the sides of the image (to fill the image field in the card) use the ratio `22:32` when cutting.
 4. Name the image files the name of the persons.
    - For a blank name use "blank_name" somewhere in the file name. You can use "blank_name1", "blank_name2", etc. for as many blank names as you want.
-5. Clone this repository and run the web app with `npm start`
+5. Clone this repository and run the web app with `npm start` (after running `npm install`)
 6. Add the images to the folder `/src/faces`
 7. Print the resulting web page from your browser (CTRL + P)
    - In Chrome in the print dialog, choose "More settings" and check the checkbox "Background graphics".
