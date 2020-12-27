@@ -54,18 +54,22 @@ Since CSS doesn't support page breaks inside Flexbox or CSS Grid it is hard code
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Uses styled-components to put CSS in JS (the components).
+Uses
+
+- [TypeScript](https://www.typescriptlang.org/) to give the developer more help
+- [styled-components](https://styled-components.com/) to put CSS in JS (the components)
+- [Prettier](https://prettier.io/) so we can skip the code style discussion
 
 ### Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
-Runs the app in the development mode.
+Runs the app in the development mode. Remember to run `npm install` first.
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits. You will also see any lint errors in the console.
 
-The page will reload if you make edits.
+#### `npm run compilecheck`
 
-You will also see any lint errors in the console.
+Runs the TypeScript compiler without emitting any files. Useful to check for compile errors in all files.

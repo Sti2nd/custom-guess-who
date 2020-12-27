@@ -57,14 +57,16 @@ function importAllImages(r: __WebpackModuleApi.RequireContext): Array<string> {
 }
 
 const StyledApp = styled.div`
-  .player1Color, .player1Color nameContainer {
+  .player1Color,
+  .player1Color nameContainer {
     background: rgb(0, 0, 117);
     color: rgb(0, 0, 117);
   }
 
-  .player2Color, .player2Color nameContainer {
-    background: #E10000;
-    color: #E10000;
+  .player2Color,
+  .player2Color nameContainer {
+    background: #e10000;
+    color: #e10000;
   }
 
   .secretColor {
