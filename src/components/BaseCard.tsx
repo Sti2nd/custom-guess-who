@@ -21,9 +21,6 @@ function BaseCard({ color, src }: CardProps) {
 }
 
 export const StyledBaseCard = styled.div`
-  margin: 0.5px;
-  height: 100%;
-
   .imageContainer {
     background: white;
     display: flex;

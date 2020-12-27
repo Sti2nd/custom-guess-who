@@ -11,8 +11,10 @@ function SecretCard(props: CardProps) {
 }
 
 const SecretCardStyle = styled.div`
+  display: flex;
   height: 73mm;
   width: 36mm;
+  margin: 0.5px;
 
   .imageContainer {
     margin: 5mm 3mm;
