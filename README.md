@@ -7,7 +7,7 @@ Generate cards ready to be printed out and used in a Guess Who game. Simply prov
 ## Features
 
 - Use your own digital images and print out ready to play with cards.
-- Create blank cards you can glue on images and write names after printing.
+- Create blank cards one can glue on images and write names after printing.
 
 ## Steps to create a custom Guess Who game
 
@@ -15,16 +15,16 @@ Follow these steps to create your own custom guess who game!
 
 1. Buy a copy of the game [Guess Who?](https://en.wikipedia.org/wiki/Guess_Who%3F)
 2. Find 24 images of someone you want to have in your game.
-3. For the best result you want to cut the images to the person's head.
+3. For the best result crop the images to the person's head.
    - Tip: Cropping can be done in many applications, like the built in Photos app in Windows. A free app that supports setting the aspect ratio when cropping is [GIMP](https://www.gimp.org/).
    - *(Optional)* To avoid white stripes on the sides of the image (to fill the image field in the card) use the ratio `22:32` when cutting.
 4. Name the image files the name of the persons.
    - For a blank name use "blank_name" somewhere in the file name. You can use "blank_name1", "blank_name2", etc. for as many blank names as you want.
 5. Clone this repository and run the web app with `npm start` (after running `npm install`)
 6. Add the images to the folder `/src/faces`
-7. Print the resulting web page from your browser (CTRL + P)
+7. Print the resulting web page from your browser. Usually the keyboard shortcut is `CTRL + P`
    - In Chrome in the print dialog, choose "More settings" and check the checkbox "Background graphics".
-   - Tip: the cards will work best if they are stiffer than regular printer paper. To achieve this you can use a thicker paper, photopaper or laminating the printer paper. You can also simply glue printer paper onto thicker paper if your printer cannot print it.
+   > Tip: the cards will work best if they are stiffer than regular printer paper. To achieve this you can use a thicker paper, photopaper or laminating the printer paper. You can also simply glue printer paper onto thicker paper if the printer cannot print it.
 8. Cut out the cards and play with them!
 
 ## Will this work for me
@@ -39,6 +39,10 @@ You can change the sizes by changing the CSS inside the components `FaceCard.js`
 Currently the code are written to find the file extensions .png, .jpg and .svg. The [limitation is your browser](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#Supported_image_formats), so it should be possible to modify the code and use any file format your browser support.
 
 The print feature of your browser could mess with the scaling. Printing a test page and measuring the cards is adviced.
+
+### Requirements
+
+To run the code you need [Node](https://nodejs.org/).
 
 ## Quirks
 
