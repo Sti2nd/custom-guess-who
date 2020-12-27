@@ -1,7 +1,5 @@
 import React from "react";
 
-function Start() {
+export default function Start() {
   return <div>Put images into the 'faces' folder!</div>;
 }
-
-export default Start;

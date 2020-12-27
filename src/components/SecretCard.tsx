@@ -1,23 +1,29 @@
 import React from "react";
 import styled from "styled-components";
+
 import { getFileNameFromPath } from "../util/toolbox";
 
-function FaceCard(props) {
+interface CardProps {
+  color: string;
+  src: string;
+}
+
+function SecretCard({ color, src }: CardProps) {
   return (
-    <StyledFaceCard className={props.color}>
+    <StyledSecretCard className={`secretCard ${color}`}>
       <div className="imageContainer">
-        <img src={props.src} alt="face"></img>
+        <img src={src} alt="face"></img>
       </div>
       <div className="nameContainer">
-        <span>{getFileNameFromPath(props.src)}</span>
+        <span>{getFileNameFromPath(src)}</span>
       </div>
-    </StyledFaceCard>
+    </StyledSecretCard>
   );
 }
 
-const StyledFaceCard = styled.div.attrs({ className: "faceCard" })`
-  width: 28mm;
-  height: 50mm;
+const StyledSecretCard = styled.div`
+  height: 73mm;
+  width: 36mm;
   margin: 0.5px;
 
   .imageContainer {
@@ -25,17 +31,18 @@ const StyledFaceCard = styled.div.attrs({ className: "faceCard" })`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3mm;
-    margin-bottom: 2mm;
+    margin: 5mm 3mm;
   }
 
   .nameContainer {
     width: calc(100% - 6mm);
-    height: 6mm;
+    height: 16mm;
     display: flex;
     justify-content: center;
     align-items: center;
     background: white;
+    font-size: 1.5rem;
+    color: gold;
     margin: auto;
   }
 
@@ -46,4 +53,4 @@ const StyledFaceCard = styled.div.attrs({ className: "faceCard" })`
   }
 `;
 
-export default FaceCard;
+export default SecretCard;

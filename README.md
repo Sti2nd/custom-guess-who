@@ -1,5 +1,7 @@
 # Custom Guess Who game
 
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 Generate cards ready to be printed out and used in a Guess Who game. Simply provide images, and the code does the rest!
 
 ![Screenshot of the code in action](./docs/assets/chrome_screenshot.png)

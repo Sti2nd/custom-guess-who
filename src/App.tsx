@@ -6,12 +6,12 @@ import Start from "./components/Start";
 import { CARD_TYPES, CARD_COLOUR } from "./constants/enums";
 
 function App() {
-  const images = importAllImages(
+  const images: Array<string> = importAllImages(
     require.context("./faces", false, /\.(PNG|png|jpe?g|JPE?G|svg|SVG)$/)
   );
 
   return (
-    <StyledApp>
+    <StyledApp className="App">
       {images.length === 0 && <Start />}
 
       <CardPage
@@ -52,11 +52,11 @@ function App() {
  * @param {Function} r The request
  * @returns {Array}
  */
-function importAllImages(r) {
-  return r.keys().map(r);
+function importAllImages(r: __WebpackModuleApi.RequireContext): Array<string> {
+  return r.keys().map(r) as Array<string>;
 }
 
-const StyledApp = styled.div.attrs({className: "App"})`
+const StyledApp = styled.div`
   .player1Color, .player1Color nameContainer {
     background: rgb(0, 0, 117);
     color: rgb(0, 0, 117);
