@@ -1,9 +1,9 @@
 import React from "react";
-import "./App.css";
+import styled from "styled-components";
 
 import CardPage from "./components/CardPage";
 import Start from "./components/Start";
-import { cardTypes } from "./enums";
+import { CARD_TYPES, CARD_COLOUR } from "./constants/enums";
 
 function App() {
   const images = importAllImages(
@@ -11,18 +11,18 @@ function App() {
   );
 
   return (
-    <div className="App">
-      {images.length === 0 ? <Start /> : null}
+    <StyledApp>
+      {images.length === 0 && <Start />}
 
       <CardPage
-        cardType={cardTypes.FACE_CARD}
-        color="player1Color"
+        cardType={CARD_TYPES.FACE_CARD}
+        color={CARD_COLOUR.PLAYER_1}
         faces={images}
         newPage={false}
       />
       <CardPage
-        cardType={cardTypes.FACE_CARD}
-        color="player2Color"
+        cardType={CARD_TYPES.FACE_CARD}
+        color={CARD_COLOUR.PLAYER_2}
         faces={images}
         newPage={true}
       />
@@ -31,18 +31,18 @@ function App() {
       Flexbox and CSS doesn't support page break, so instead we make two 
       Flexbox containers. */}
       <CardPage
-        cardType={cardTypes.SECRET_CARD}
-        color="secretColor"
+        cardType={CARD_TYPES.SECRET_CARD}
+        color={CARD_COLOUR.SECRET}
         faces={images.slice(0, 12)}
         newPage={true}
       />
       <CardPage
-        cardType={cardTypes.SECRET_CARD}
-        color="secretColor"
+        cardType={CARD_TYPES.SECRET_CARD}
+        color={CARD_COLOUR.SECRET}
         faces={images.slice(12)}
         newPage={true}
       />
-    </div>
+    </StyledApp>
   );
 }
 
@@ -55,5 +55,25 @@ function App() {
 function importAllImages(r) {
   return r.keys().map(r);
 }
+
+const StyledApp = styled.div.attrs({className: "App"})`
+  .player1Color, .player1Color nameContainer {
+    background: rgb(0, 0, 117);
+    color: rgb(0, 0, 117);
+  }
+
+  .player2Color, .player2Color nameContainer {
+    background: #E10000;
+    color: #E10000;
+  }
+
+  .secretColor {
+    background: gold;
+  }
+
+  .newPage {
+    break-before: page;
+  }
+`;
 
 export default App;

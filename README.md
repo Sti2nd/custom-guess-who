@@ -34,7 +34,7 @@ You should double check that the sizes of the cards matches the sizes of your ga
 - Face card: 50mm (height) x 28mm (width)
 - Secret card: 73mm (height) x 36mm (width)
 
-You can change the sizes by changing the CSS inside the components `FaceCard.js` and `SecretCard.js`. The card colours are defined in `App.css`.
+You can change the sizes by changing the CSS inside the components `FaceCard.js` and `SecretCard.js`. The card colours are defined in `App.js` component.
 
 Currently the code are written to find the file extensions .png, .jpg and .svg. The [limitation is your browser](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#Supported_image_formats), so it should be possible to modify the code and use any file format your browser support.
 

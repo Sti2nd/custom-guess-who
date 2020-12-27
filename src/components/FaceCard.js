@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { getFileNameFromPath } from "../toolbox";
+import { getFileNameFromPath } from "../util/toolbox";
 
 function FaceCard(props) {
   return (
