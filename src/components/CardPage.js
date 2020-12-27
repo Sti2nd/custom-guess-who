@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import FaceCard from "./FaceCard";
 import SecretCard from "./SecretCard";
 import styled from "styled-components";
-import { CARD_TYPES } from "../constants/cardTypes";
+import { CARD_TYPES } from "../constants/enums";
 
 function CardPage(props) {
   // A list with a card for each face. Type of card is decided by the cardType

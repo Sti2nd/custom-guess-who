@@ -16,7 +16,7 @@ function SecretCard(props) {
   );
 }
 
-const StyledSecretCard = styled.div.attrs({className: "faceCard"})`
+const StyledSecretCard = styled.div.attrs({className: "secretCard"})`
   height: 73mm;
   width: 36mm;
   margin: 0.5px;
