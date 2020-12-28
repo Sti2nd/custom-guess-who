@@ -4,14 +4,13 @@ import styled from "styled-components";
 import CardPage from "./components/CardPage";
 import Start from "./components/Start";
 import { CARD_TYPES, CARD_COLOUR } from "./constants/enums";
+import { importAllImages } from "./util/toolbox";
 
 function App() {
-  const images = importAllImages(
-    require.context("./faces", false, /\.(PNG|png|jpe?g|JPE?G|svg|SVG)$/)
-  );
+  const images: Array<string> = importAllImages();
 
   return (
-    <StyledApp>
+    <StyledApp className="App">
       {images.length === 0 && <Start />}
 
       <CardPage
@@ -46,25 +45,17 @@ function App() {
   );
 }
 
-/**
- * Import all images from the folder /src/faces/ by using WebPack require.
- * https://webpack.js.org/guides/dependency-management/#context-module-api
- * @param {Function} r The request
- * @returns {Array}
- */
-function importAllImages(r) {
-  return r.keys().map(r);
-}
-
-const StyledApp = styled.div.attrs({className: "App"})`
-  .player1Color, .player1Color nameContainer {
+const StyledApp = styled.div`
+  .player1Color,
+  .player1Color nameContainer {
     background: rgb(0, 0, 117);
     color: rgb(0, 0, 117);
   }
 
-  .player2Color, .player2Color nameContainer {
-    background: #E10000;
-    color: #E10000;
+  .player2Color,
+  .player2Color nameContainer {
+    background: #e10000;
+    color: #e10000;
   }
 
   .secretColor {

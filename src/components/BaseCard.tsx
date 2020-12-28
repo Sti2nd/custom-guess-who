@@ -2,36 +2,34 @@ import React from "react";
 import styled from "styled-components";
 import { getFileNameFromPath } from "../util/toolbox";
 
-function FaceCard(props) {
+export interface CardProps {
+  color: string;
+  src: string;
+}
+
+function BaseCard({ color, src }: CardProps) {
   return (
-    <StyledFaceCard className={props.color}>
+    <StyledBaseCard className={`card ${color}`}>
       <div className="imageContainer">
-        <img src={props.src} alt="face"></img>
+        <img src={src} alt="face"></img>
       </div>
       <div className="nameContainer">
-        <span>{getFileNameFromPath(props.src)}</span>
+        <span>{getFileNameFromPath(src)}</span>
       </div>
-    </StyledFaceCard>
+    </StyledBaseCard>
   );
 }
 
-const StyledFaceCard = styled.div.attrs({ className: "faceCard" })`
-  width: 28mm;
-  height: 50mm;
-  margin: 0.5px;
-
+export const StyledBaseCard = styled.div`
   .imageContainer {
     background: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3mm;
-    margin-bottom: 2mm;
   }
 
   .nameContainer {
     width: calc(100% - 6mm);
-    height: 6mm;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,4 +44,4 @@ const StyledFaceCard = styled.div.attrs({ className: "faceCard" })`
   }
 `;
 
-export default FaceCard;
+export default BaseCard;

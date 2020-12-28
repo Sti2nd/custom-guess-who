@@ -1,5 +1,7 @@
 # Custom Guess Who game
 
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 Generate cards ready to be printed out and used in a Guess Who game. Simply provide images, and the code does the rest!
 
 ![Screenshot of the code in action](./docs/assets/chrome_screenshot.png)
@@ -34,7 +36,7 @@ You should double check that the sizes of the cards matches the sizes of your ga
 - Face card: 50mm (height) x 28mm (width)
 - Secret card: 73mm (height) x 36mm (width)
 
-You can change the sizes by changing the CSS inside the components `FaceCard.js` and `SecretCard.js`. The card colours are defined in `App.js` component.
+You can change the sizes by changing the CSS inside the components `FaceCard.tsx` and `SecretCard.tsx`. The card colours are defined in `App.tsx` component.
 
 Currently the code are written to find the file extensions .png, .jpg and .svg. The [limitation is your browser](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#Supported_image_formats), so it should be possible to modify the code and use any file format your browser support.
 
@@ -52,18 +54,22 @@ Since CSS doesn't support page breaks inside Flexbox or CSS Grid it is hard code
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Uses styled-components to put CSS in JS (the components).
+Uses
+
+- [TypeScript](https://www.typescriptlang.org/) to give developers some more help
+- [styled-components](https://styled-components.com/) to put CSS in JS (the components)
+- [Prettier](https://prettier.io/) so we can skip the code style discussion
 
 ### Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
-Runs the app in the development mode.
+Runs the app in the development mode. Remember to run `npm install` first.
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits. You will also see any lint errors in the console.
 
-The page will reload if you make edits.
+#### `npm run compilecheck`
 
-You will also see any lint errors in the console.
+Runs the TypeScript compiler without emitting any files. Useful to check for compile errors in all files.
