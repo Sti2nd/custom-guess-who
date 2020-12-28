@@ -36,7 +36,7 @@ You should double check that the sizes of the cards matches the sizes of your ga
 - Face card: 50mm (height) x 28mm (width)
 - Secret card: 73mm (height) x 36mm (width)
 
-You can change the sizes by changing the CSS inside the components `FaceCard.js` and `SecretCard.js`. The card colours are defined in `App.js` component.
+You can change the sizes by changing the CSS inside the components `FaceCard.tsx` and `SecretCard.tsx`. The card colours are defined in `App.tsx` component.
 
 Currently the code are written to find the file extensions .png, .jpg and .svg. The [limitation is your browser](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#Supported_image_formats), so it should be possible to modify the code and use any file format your browser support.
 
@@ -56,7 +56,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Uses
 
-- [TypeScript](https://www.typescriptlang.org/) to give the developer more help
+- [TypeScript](https://www.typescriptlang.org/) to give developers some more help
 - [styled-components](https://styled-components.com/) to put CSS in JS (the components)
 - [Prettier](https://prettier.io/) so we can skip the code style discussion
 
