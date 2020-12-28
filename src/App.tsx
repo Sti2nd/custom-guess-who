@@ -4,11 +4,10 @@ import styled from "styled-components";
 import CardPage from "./components/CardPage";
 import Start from "./components/Start";
 import { CARD_TYPES, CARD_COLOUR } from "./constants/enums";
+import { importAllImages } from "./util/toolbox";
 
 function App() {
-  const images: Array<string> = importAllImages(
-    require.context("./faces", false, /\.(PNG|png|jpe?g|JPE?G|svg|SVG)$/)
-  );
+  const images: Array<string> = importAllImages();
 
   return (
     <StyledApp className="App">
@@ -44,16 +43,6 @@ function App() {
       />
     </StyledApp>
   );
-}
-
-/**
- * Import all images from the folder /src/faces/ by using WebPack require.
- * https://webpack.js.org/guides/dependency-management/#context-module-api
- * @param {Function} r The request
- * @returns {Array}
- */
-function importAllImages(r: __WebpackModuleApi.RequireContext): Array<string> {
-  return r.keys().map(r) as Array<string>;
 }
 
 const StyledApp = styled.div`
